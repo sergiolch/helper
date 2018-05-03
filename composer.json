@@ -9,7 +9,7 @@
             "email": "sergio.loza@devisioners.com"
         }
     ],
-    "type": "project",
+    "type": "library",
     "require": {
 		"php": ">=5.4"
     },
