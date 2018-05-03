@@ -1,0 +1,24 @@
+{
+    "name": "sergiolch/helper",
+    "description": "Helper functions.",
+    "keywords": ["composer", "package", "library", "helper functions"],
+    "license": "AML",
+    "authors": [
+        {
+            "name": "Sergio Loza",
+            "email": "sergio.loza@devisioners.com"
+        }
+    ],
+    "type": "project",
+    "require": {
+		"php": ">=5.4"
+    },
+	"require-dev": {
+		"phpunit/phpunit": "5.2.*"
+    },
+	"autoload": {
+        "psr-4": {
+            "sergiolch\\helper\\": "src/"
+        }
+    }
+}
