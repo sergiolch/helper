@@ -13,3 +13,4 @@ Functions
 ---------
 
 * super_trim: to remove all withespace
+* csv_field: CSV filed formats
