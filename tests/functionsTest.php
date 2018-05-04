@@ -6,6 +6,8 @@
  *  For each class in your library, there should be a corresponding Unit-Test for it
  *  Unit-Tests should be as much as possible independent from other test going on.
  *
+ * execute: vendor/bin/phpunit
+ *
  *  @author sergiolch
  */
 class functionsTest extends PHPUnit_Framework_TestCase{
@@ -34,6 +36,28 @@ class functionsTest extends PHPUnit_Framework_TestCase{
         $text = ' abc  123 ';
         $var = \sergiolch\helper\super_trim($text);
         $this->assertTrue($var == 'abc 123');
+        unset($var);
+    }
+
+    /**
+     * no quotes
+     *
+     */
+    public function testCSV(){
+        $text = 'normal';
+        $var = \sergiolch\helper\csv_field($text);
+        $this->assertTrue($var == $text);
+        unset($var);
+    }
+
+    /**
+     * quotes
+     *
+     */
+    public function testCSVQuotes(){
+        $text = 'this is a "test"';
+        $var = \sergiolch\helper\csv_field($text);
+        $this->assertTrue($var == '"this is a ""test"""');
         unset($var);
     }
 
